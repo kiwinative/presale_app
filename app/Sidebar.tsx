@@ -9,8 +9,8 @@ function Sidebar() {
     const [linksubmenuOpen, setLinkSubmenuOpen] = useState(true)
 
   return (
-      <div className='flex'>
-        <div className={`hidden md:block h-[100%] bg-white py-5 px-[16px] space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500`}>
+      <div>
+        <div className={`hidden md:block bg-[#F5F5F5] py-5 px-[16px] space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-full max-h-full overflow-y-auto`}>
           <div className='space-y-5'>
               <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#90a55c] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
                 <HomeIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
