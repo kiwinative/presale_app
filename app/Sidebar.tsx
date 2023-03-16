@@ -7,7 +7,7 @@ function Sidebar() {
     const {open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen} = useGlobalContext()
   return (
       <div className={`h-screen overflow-auto bg-[#F5F5F5] py-[80px] fixed`}>
-        <div className={`hidden md:block space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-screen max-h-full`}>
+        <div className={`hidden sm:block space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-screen max-h-full`}>
           <div className='space-y-5'>
               <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#90a55c] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
                 <HomeIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
