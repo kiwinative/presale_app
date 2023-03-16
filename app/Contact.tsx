@@ -14,13 +14,13 @@ export const Contact = () => {
         <h4 className='text-[50px] font-semibold'>Contact Core Team</h4>
         <div className="flex flex-col items-center gap-[40px] mt-[54px]">
             <div className='flex flex-row justify-center gap-[250px] w-full'>
-                <a href="mailto:media@privateemail.pro" className="rounded-full bg-[#6C8726] p-3">
+                <a href="mailto:media@privateemail.pro" className="items-center rounded-[30px] bg-[#6C8726] p-3">
                     <EnvelopeIcon className="h-[30px] w-[30px]"/>
                 </a>
-                <a href="tel:+234"className="rounded-full bg-[#6C8726] p-3">
+                <a href="tel:+234"className="rounded-[30px] bg-[#6C8726] p-3">
                     <PhoneIcon className="h-[30px] w-[30px]"/>
                 </a>
-                <a href="https://" className="rounded-full bg-[#6C8726] p-3">
+                <a href="https://" className="rounded-[30px] bg-[#6C8726] p-3">
                 <FontAwesomeIcon icon={faTelegram as IconProp} className="h-[30px] w-[30px]"/>
                 </a>
             </div>

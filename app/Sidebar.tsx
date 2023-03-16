@@ -1,13 +1,10 @@
 "use client"
 import { HomeIcon, BuildingStorefrontIcon, StopCircleIcon, CircleStackIcon, CurrencyDollarIcon, ShoppingBagIcon, ChevronDoubleLeftIcon, ChevronDownIcon, DocumentDuplicateIcon, MoonIcon } from '@heroicons/react/24/solid'
-import { useState } from 'react'
+import { useGlobalContext } from './Context/store'
 
 
 function Sidebar() {
-    const [open, setOpen] = useState(true)
-    const [infosubmenuOpen, setInfoSubmenuOpen] = useState(true)
-    const [linksubmenuOpen, setLinkSubmenuOpen] = useState(true)
-
+    const {open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen} = useGlobalContext()
   return (
       <div className={`h-screen overflow-auto bg-[#F5F5F5] py-[80px] fixed`}>
         <div className={`hidden md:block space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-screen max-h-full`}>
