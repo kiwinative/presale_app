@@ -1,5 +1,5 @@
 "use client"
-import { HomeIcon, BuildingStorefrontIcon, StopCircleIcon, CircleStackIcon, CurrencyDollarIcon, ShoppingBagIcon, ChevronDoubleLeftIcon, ChevronDoubleRightIcon, ChevronDownIcon, ChevronUpIcon, DocumentDuplicateIcon, MoonIcon  } from '@heroicons/react/24/solid'
+import { HomeIcon, BuildingStorefrontIcon, StopCircleIcon, CircleStackIcon, CurrencyDollarIcon, ShoppingBagIcon, ChevronDoubleLeftIcon, ChevronDownIcon, DocumentDuplicateIcon, MoonIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
 
 
@@ -9,31 +9,31 @@ function Sidebar() {
     const [linksubmenuOpen, setLinkSubmenuOpen] = useState(true)
 
   return (
-      <div>
-        <div className={`hidden md:block bg-[#F5F5F5] py-5 px-[16px] space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-full max-h-full overflow-y-auto`}>
+      <div className={`h-screen overflow-auto bg-[#F5F5F5] py-[80px] fixed`}>
+        <div className={`hidden md:block space-y-3 ${open ? "w-[260px]" : "w-[75px]"} duration-500 h-screen max-h-full`}>
           <div className='space-y-5'>
-              <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#90a55c] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-                <HomeIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+              <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#90a55c] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+                <HomeIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                 <p className={`${!open && "hidden"}`}>Home</p>
               </div>
-                <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-                    <BuildingStorefrontIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+                <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+                    <BuildingStorefrontIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                     <p className={`${!open && "hidden"}`}>Airdrop</p>
                 </div>
-                <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-                    <StopCircleIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+                <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+                    <StopCircleIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                     <p className={`${!open && "hidden"}`}>KSports</p>
                 </div>
-            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-            <CircleStackIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+            <CircleStackIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                 <p className={`${!open && "hidden"}`}>KCasino</p>
             </div>
-            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-            <ShoppingBagIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+            <ShoppingBagIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                 <p className={`${!open && "hidden"}`}>KStore</p>
             </div>
-            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "ml-7 pl-7"} `}>
-            <CurrencyDollarIcon className={`h-[20px] w-[20px] block float-left ${open && "mr-3"}`}/>
+            <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+            <CurrencyDollarIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                 <p className={`${!open && "hidden"}`}>The Token</p>
             </div>
           </div>
@@ -89,7 +89,7 @@ function Sidebar() {
             <ChevronDoubleLeftIcon className={`h-4 w-4 cursor-pointer ${!open && "rotate-180"}`}  onClick={() => setOpen (!open)}/>
           </div>
     </div>
-      </div>
+    </div>
   )
 }
 

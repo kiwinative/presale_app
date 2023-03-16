@@ -2,7 +2,7 @@ import { WalletIcon, BeakerIcon, Bars3Icon} from '@heroicons/react/24/solid'
 
 function Header() {
   return (
-      <header className='bg-white px-[20px] md:px-[40px]'>
+      <header className='bg-white fixed w-full px-[20px] z-10 md:px-[40px]'>
           <div className="flex justify-between items-center">
         <div className='flex items-center space-x-3 '>
           <Bars3Icon className='h-[25px] w-[25px] md:hidden cursor-pointer' />
