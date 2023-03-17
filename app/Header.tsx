@@ -5,7 +5,7 @@ function Header() {
       <header className='bg-white fixed w-full px-[20px] z-10 md:px-[40px]'>
           <div className="flex justify-between items-center">
         <div className='flex items-center space-x-3 '>
-          <Bars3Icon className='h-[25px] w-[25px] md:hidden cursor-pointer text-black' />
+          <Bars3Icon className='h-[25px] w-[25px] sm:hidden cursor-pointer text-black' />
           <div className='flex flex-col items-center cursor-pointer text-black'>
                   <BeakerIcon className='h-[40px] w-[40px] text-black' />
                   <h1 className='font-[16px]'>KIWINATIVE</h1>
