@@ -48,7 +48,7 @@ export const Hero = () => {
                 <p className='text-white font-semibold text-[20px]'>Presale</p>
                 {/* progress bar */}
                 <div className='flex flex-col gap-[10px] font-semibold'>
-                    <div className='flex flex-row p-[10px] gap-[120px]'>
+                    <div className='flex flex-row p-[10px] gap-[90px] sm:gap-[120px]'>
                         <div className='flex flex-col items-center gap-2'>
                             <p className='text-white text-[9px]'>PRE SELL</p>
                             <div className='border-solid border-[#D3E89E] h-[12px] w-0  border-[1.5px]'></div>
