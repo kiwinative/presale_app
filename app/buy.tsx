@@ -24,14 +24,14 @@ function Buy() {
                       </ul>
                   </div>
               </div>
-              <div className={`flex flex-col gap-[35px]  border-solid border-2 py-[43px] px-[12px] sm:px-[51px] ${open && "sm:px-7"} border-[#9CAB72] rounded-[25px]`}>
+              <div className={`flex flex-col gap-[35px]  border-solid border-2 py-[43px] px-[12px] sm:px-[51px] ${open && "sm:px-7"} border-[#9CAB72] rounded-[25px] `}>
                   <div>
                       <p className='text-[16px]'>Amount BNB</p>
-                      <div className='w-[236px] h-[50px] bg-[#6C8726] rounded-[14px] opacity-[41%]'></div>
+                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'></div>
                   </div>
                   <div>
                       <p className='text-[16px]'>Rate</p>
-                      <div className='w-[236px] h-[50px] bg-[#6C8726] rounded-[14px] opacity-[41%]'></div>
+                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'></div>
                   </div>
                   <button className='w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-[43px]'>BUY</button>
               </div>

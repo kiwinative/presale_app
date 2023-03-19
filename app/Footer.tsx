@@ -2,6 +2,11 @@
 
 import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
 import { useGlobalContext } from './Context/store'
+import Image from 'next/image'
+import discord from '../public/discord_white.svg'
+import twitter from '../public/twitter_white.svg'
+import reddit from '../public/reddit_white.svg'
+import telegram from '../public/telegram_white.svg'
 
 const Footer = () => {
   const {open} = useGlobalContext()
@@ -9,28 +14,23 @@ const Footer = () => {
   return (
     <div className={`flex flex-col flex-grow ${open && "md:flex-col"} gap-[90px] items-center text-white bg-[#140E3A] py-[42px] px-[50px] md:px-[150px] font-semibold rounded-3xl`}>
         <h3 className="text-[40px] lg:text-[50px] text-center">Don’t miss out, Stay updated</h3>
-          <div className='flex flex-row flex-grow items-center justify-between space-x-10 lg:space-x-16 text-white'>
-            <div className="flex h-[55px] flex-grow  bg-[#222624] rounded-[28px] relative" data-te-input-wrapper-init>
+          <div className='flex flex-row flex-grow items-center justify-between space-x-3 sm:space-x-10 lg:space-x-16 text-white'>
+            <div className="flex h-[40px] sm:h-[55px] flex-grow bg-[#222624] rounded-[28px] relative" data-te-input-wrapper-init>
               <input
               type="text"
-              className="h-full bg-[#222624] rounded-[28px] peer block min-h-[auto] w-full border-0  py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              className="h-full bg-[#222624] rounded-[28px] peer block p-2"
               id="exampleFormControlInput1"
-              placeholder="Example label" />
-              <label
-              htmlFor="exampleFormControlInput1"
-              className="text[20px] pointer-events-none absolute top-[9px] left-[16px] mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-white dark:peer-focus:text-neutral-200"
-              >Enter your email address
-              </label>
+              placeholder="Enter your email address" />
             </div>
-            <button className="p-[12px] lg:py-[12px] lg:px-[57px] bg-[#6C8726] rounded-[27px] text-[20px] font-semibold">Subscribe</button>  
+            <button className="p-[8px] sm:p-[12px] lg:py-[12px] lg:px-[57px] bg-[#6C8726] rounded-[27px] sm:text-[20px] font-semibold">Subscribe</button>  
           </div>
           <p className='text-center font-semibold text-[20px]'>Don’t hesitate to subscribe to latest news on KWN Token social medias as well as updated cryptocurrency blogs to get updated on KIWINATIVE</p>
           <div className='flex flex-col w-full space-y-4 items-center'>
           <div className='flex flex-row flex-grow items-center space-x-[35px] sm:space-x-[42px] text-white'>
-                <DocumentDuplicateIcon className='h-[60px] w-[60px] cursor-pointer p-3 bg-[#2B2D35] rounded-lg '/>
-                <DocumentDuplicateIcon className='h-[60px] w-[60px] cursor-pointer p-3 bg-[#2B2D35] rounded-lg'/>
-                <DocumentDuplicateIcon className='h-[60px] w-[60px] cursor-pointer p-3 bg-[#2B2D35] rounded-lg'/>
-                <DocumentDuplicateIcon className='h-[60px] w-[60px] cursor-pointer p-3 bg-[#2B2D35] rounded-lg'/>
+            <a target={'_blank'} href="https://twitter.com/KIWINATIVEKWN?t=Viy21C9rs8BgUQVv8LKLQA&s=09"><Image className='p-1 sm:p-3 bg-[#2B2D35] rounded-lg cursor-pointer' src={twitter} alt={'twitter'} height={60} width={60} /></a>
+            <a target={'_blank'} href="https://t.me/+0g-hPTQ3OAZlMGI8"><Image className='p-1 sm:p-3 bg-[#2B2D35] rounded-lg cursor-pointer' src={telegram} alt={'telegram'} height={60} width={60} /></a>
+            <a target={'_blank'} href="https://discord.gg/KhCa6tuJ"><Image className='p-1 sm:p-3 bg-[#2B2D35] rounded-lg cursor-pointer' src={discord} alt={'discord'} height={60} width={60} /></a>
+            <a target={'_blank'} href="https://www.reddit.com/r/KIWINATIVE1?utm_medium=android_app&utm_source=share"><Image className='p-1 sm:p-3 bg-[#2B2D35] rounded-lg cursor-pointer' src={reddit} alt={'reddit'} height={60} width={60} /></a>
           </div>
           <div className='w-full h-[2px] bg-[#2B2D35]'></div>
           </div>

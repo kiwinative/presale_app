@@ -11,6 +11,8 @@ interface ContextProps {
     setLinkSubmenuOpen: Dispatch<SetStateAction<boolean>>
     faq1Open: boolean,
     setFaq1Open: Dispatch<SetStateAction<boolean>>
+    active: boolean,
+    setActive: Dispatch<SetStateAction<boolean>>
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -29,6 +31,10 @@ const GlobalContext = createContext<ContextProps>({
     faq1Open: false,
     setFaq1Open: function (value: SetStateAction<boolean>): void {
         throw new Error("Function not implemented.");
+    },
+    active: false,
+    setActive: function (value: SetStateAction<boolean>): void {
+        throw new Error("Function not implemented.");
     }
 })
 
@@ -37,9 +43,10 @@ export const GlobalContextProvider = ({ children }) => {
     const [infosubmenuOpen, setInfoSubmenuOpen] = useState(true)
     const [linksubmenuOpen, setLinkSubmenuOpen] = useState(true)
     const [faq1Open, setFaq1Open] = useState(true)
+    const [active, setActive] = useState(true)
 
     return (
-        <GlobalContext.Provider value={{ open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen, faq1Open, setFaq1Open }}>
+        <GlobalContext.Provider value={{ open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen, faq1Open, setFaq1Open, active, setActive}}>
             {children}
         </GlobalContext.Provider>
     )
