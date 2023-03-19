@@ -27,11 +27,14 @@ function Buy() {
               <div className={`flex flex-col gap-[35px]  border-solid border-2 py-[43px] px-[12px] sm:px-[51px] ${open && "sm:px-7"} border-[#9CAB72] rounded-[25px] `}>
                   <div>
                       <p className='text-[16px]'>Amount BNB</p>
-                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'></div>
+                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'>
+                        <input type="number" name="" id="" className='w-full h-full' />
+                      </div>
                   </div>
                   <div>
                       <p className='text-[16px]'>Rate</p>
-                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'></div>
+                      in
+                      <div className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px]'>0.0000025</div>
                   </div>
                   <button className='w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-[43px]'>BUY</button>
               </div>
