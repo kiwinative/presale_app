@@ -1,7 +1,6 @@
 import './globals.css'
 import Header from './Header'
 import { GlobalContextProvider, useGlobalContext } from './Context/store'
-import Sidebar from './Sidebar'
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        
       <GlobalContextProvider>
         <Header />
         <div>

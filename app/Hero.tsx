@@ -9,8 +9,8 @@ const poppins = Poppins({
 export const Hero = () => {
   return (
     <><div className='flex flex-col gap-[35px] px-3 mt-[140px] md:px-6 sm:mx-[10px]'>
-          <h2 className={`${poppins} text-white font-semibold text-5xl leading-[55px] text-center md:text-6xl md:leading-[72.5px] lg:text-[55px] lg:leading-[70px]`}><span className='text-[#6C8726]'>KIWINATIVE</span> Development <br /> And Exchange Token</h2>
-          <p className='text-white text-center text-[16px] md:text-[24px] lg:text-[20px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h2 className={`${poppins} text-white font-semibold text-5xl leading-[55px] text-center md:text-6xl md:leading-[72.5px] lg:text-[55px] lg:leading-[70px]`}><span className='text-[#6C8726]'>KIWINATIVE</span> Web3 Platform<br /> And Utility Token</h2>
+          <p className='text-white text-center text-[16px] md:text-[24px] lg:text-[20px]'>kiwinative focuses on enhancing peer to peer transactions <br /> and improves usability and profitability.</p>
       </div>
       <div className='flex flex-col gap-[70px] items-center lg:px-[50px] lg:flex-row lg:items-start'>
             <div className='flex flex-col gap-[44px]'>

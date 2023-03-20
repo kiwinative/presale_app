@@ -108,17 +108,17 @@ function Sidebar() {
                     <BuildingStorefrontIcon className={`h-[20px] w-[20px] block`}/>
                     <p>Airdrop</p>
                 </div>
-                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center  hover:bg-[#DEFEBD] cursor-pointer text-gray-600 font-[16px] rounded-[10px]`}>
+                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center   text-gray-600 font-[16px] rounded-[10px]`}>
                     <StopCircleIcon className={`h-[20px] w-[20px] block`}/>
                     <p>KSports</p>
                     <p className={`text-center px-1 bg-slate-200 rounded-lg`}>soon</p>
                 </div>
-                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center  hover:bg-[#DEFEBD] cursor-pointer text-gray-600 font-[16px] rounded-[10px]`}>
+                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center   text-gray-600 font-[16px] rounded-[10px]`}>
                     <CircleStackIcon className={`h-[20px] w-[20px] block`}/>
                     <p>KCasino</p>
                     <p className={`text-center px-1 bg-slate-200 rounded-lg`}>soon</p>
                 </div>
-                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center  hover:bg-[#DEFEBD] cursor-pointer text-gray-600 font-[16px] rounded-[10px]`}>
+                <div className={`flex flex-row gap-2 ml-[40px] p-[10px] items-center   text-gray-600 font-[16px] rounded-[10px]`}>
                 <ShoppingBagIcon className={`h-[20px] w-[20px] block`}/>
                     <p>KStore</p>
                     <p className={`text-center px-1 bg-slate-200 rounded-lg`}>soon</p>

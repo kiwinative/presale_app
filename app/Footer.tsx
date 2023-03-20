@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <button className="p-[8px] sm:p-[12px] lg:py-[12px] lg:px-[57px] bg-[#6C8726] rounded-[27px] sm:text-[20px] font-semibold">Subscribe</button>  
           </div>
-          <p className='text-center font-semibold text-[20px]'>Don’t hesitate to subscribe to latest news on KWN Token social medias as well as updated cryptocurrency blogs to get updated on KIWINATIVE</p>
+          <p className='text-center font-semibold text-[20px]'>Don’t hesitate to subscribe to the latest news on KWN Token social media as well as updated cryptocurrency blogs to get updated on KIWINATIVE</p>
           <div className='flex flex-col w-full space-y-4 items-center'>
           <div className='flex flex-row flex-grow items-center space-x-[35px] sm:space-x-[42px] text-white'>
             <a target={'_blank'} href="https://twitter.com/KIWINATIVEKWN?t=Viy21C9rs8BgUQVv8LKLQA&s=09"><Image className='p-1 sm:p-3 bg-[#2B2D35] rounded-lg cursor-pointer' src={twitter} alt={'twitter'} height={60} width={60} /></a>
