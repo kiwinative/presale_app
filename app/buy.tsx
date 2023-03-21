@@ -1,17 +1,24 @@
 "use client";
 
 import { useGlobalContext } from './Context/store'
-import { useAddress } from "@thirdweb-dev/react";
+import { useAddress, useSigner } from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { DocumentDuplicateIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
-import { Popover } from '@headlessui/react'
 import Image from 'next/image';
 import twitter from '../public/twitter_icon.svg'
 import discord from '../public/discord_icon.svg'
 import reddit from '../public/reddit_icon.svg'
+import { crowdsale_details } from './contract';
 
-function Buy() {
+async function Buy() {
     const {open, isPresale, setIsPresale} = useGlobalContext()
     const address = useAddress();
+    const signer = useSigner();
+    const sdk = ThirdwebSDK.fromSigner(signer);
+    const contract = await sdk.getContract(
+        crowdsale_details['contract address'], 
+        crowdsale_details.abi, 
+    );
   return (
     <><div className={`flex flex-row gap-[25px] sm:gap-[150px] md:gap-[250px] ${open && "md:gap-[100px]"} mt-[30px]`}>
           <button className={`bg-[#6C8726] px-[15px] rounded-[40px] py-[13px] sm:px-[20px] text-white font-semibold text-[14px] sm:text-[17px] lg:text-[20px]`} onClick={() => {setIsPresale(true)}}>Purchase Token</button>
@@ -43,7 +50,7 @@ function Buy() {
                       <input type={'number'} value={0.0000025} readOnly className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px] p-3 focus:outline-none '></input>
                   </div>
                   <div className='flex items-center flex-col'>
-                  <button  className={`w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-5`}>BUY</button>
+                  <button  className={`w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-5`} >BUY</button>
                   <p className={`${address && "hidden"} text-red-500 mb-[40px]`}>No wallet connected</p>
                   </div>
               </div>
