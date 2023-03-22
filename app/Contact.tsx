@@ -18,13 +18,13 @@ export const Contact = () => {
         <h4 className={`text-[35px] sm:text-[50px] font-semibold ${open && "sm:text-[40px]"}`}>Contact Core Team</h4>
         <div className="flex flex-col items-center gap-[40px] mt-[54px]">
             <div className='flex flex-row justify-between w-full px-[30px]'>
-                <a href="mailto:media@privateemail.pro" className="items-center rounded-[30px] bg-[#6C8726] p-3">
+                <a href="mailto:media@privateemail.pro" target={'_blank'} className="items-center rounded-[30px] bg-[#6C8726] p-3">
                     <EnvelopeIcon className="h-[30px] w-[30px]"/>
                 </a>
-                <a href="tel:+234"className="rounded-[30px] bg-[#6C8726] p-3">
+                <a href="tel:+234" target={'_blank'} className="rounded-[30px] bg-[#6C8726] p-3">
                     <PhoneIcon className="h-[30px] w-[30px]"/>
                 </a>
-                <a href="https://t.me/+0g-hPTQ3OAZlMGI8" className="rounded-[30px] bg-[#6C8726] p-3">
+                <a href="https://t.me/+0g-hPTQ3OAZlMGI8" target={'_blank'} className="rounded-[30px] bg-[#6C8726] p-3">
                     <Image className=' cursor-pointer' src={telegram_white} alt={'telegram'} height={30} width={30} />
                 </a>
             </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
 import { useGlobalContext } from './Context/store'
 import Image from 'next/image'
 import discord from '../public/discord_white.svg'

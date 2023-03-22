@@ -25,7 +25,7 @@ function Sidebar() {
                     <BuildingStorefrontIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                     <p className={`${!open && "hidden"}`}>Airdrop</p>
                 </div>
-                <div className={`flex py-[10px] items-center ${!open && "justify-center"} cursor-default  font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
+                <div className={`flex py-[10px] items-center ${!open && "justify-center"} cursor-default text-gray-600  font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
                     <StopCircleIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
                     <p className={`${!open && "hidden"} ${open && "mr-1"}`}>KSports</p>
                     <p className={`${!open && "hidden"} text-center px-1 bg-slate-200 rounded-lg`}>soon</p>
@@ -52,8 +52,8 @@ function Sidebar() {
             </div>
             <div className={`pl-5 ${infosubmenuOpen && "hidden"}`}>
             <ul>
-                <li>White paper</li>
-                <li>Medium</li>
+                <a href=""><li>White paper</li></a>
+                <a href=""><li>Medium</li></a>
             </ul>
             </div>
             
@@ -63,7 +63,7 @@ function Sidebar() {
             </div>
             <div className={`pl-5 ${linksubmenuOpen && "hidden"}`}>
             <ul>
-                <li>Binance explorer</li>
+                <a href=""><li>Binance explorer</li></a>
             </ul>
             </div>
             <div>
@@ -94,7 +94,7 @@ function Sidebar() {
             <MoonIcon className={`h-9 w-9 p-2 border-solid border-[1.5px] border-[#6C8726] rounded-[48px] cursor-pointer `}  onClick={() => setOpen (!open)}/>
           </div>
           <div className={`flex pt-3 ${open ? "flex-row-reverse": "justify-center"}`}>
-            <ChevronDoubleLeftIcon className={`h-4 w-4 cursor-pointer ${!open && "rotate-180"}`}  onClick={() => setOpen (!open)}/>
+            <ChevronDoubleLeftIcon className={`h-4 w-4 cursor-pointer ${!open && "rotate-180"} mb-8`}  onClick={() => setOpen (!open)}/>
           </div>
         
     </div>
@@ -135,8 +135,8 @@ function Sidebar() {
             </div>
             <div className={`pl-5 ${infosubmenuOpen && "hidden"}`}>
             <ul>
-                <li>White paper</li>
-                <li>Medium</li>
+                <a href=""><li>White paper</li></a>
+                <a href=""><li>Medium</li></a>
             </ul>
             </div>
             
@@ -146,7 +146,7 @@ function Sidebar() {
             </div>
             <div className={`pl-5 ${linksubmenuOpen && "hidden"}`}>
             <ul>
-                <li>Binance explorer</li>
+                <a href=""><li>Binance explorer</li></a>
             </ul>
             </div>
             <div>

@@ -2,7 +2,7 @@
 
 import { useGlobalContext } from './Context/store'
 import { useAddress, useSigner } from "@thirdweb-dev/react";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { ethers } from 'ethers';
 import { DocumentDuplicateIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import twitter from '../public/twitter_icon.svg'
@@ -10,15 +10,20 @@ import discord from '../public/discord_icon.svg'
 import reddit from '../public/reddit_icon.svg'
 import { crowdsale_details } from './contract';
 
-async function Buy() {
-    const {open, isPresale, setIsPresale} = useGlobalContext()
+
+function Buy() {
+    const {open, isPresale, setIsPresale, amount, setAmount} = useGlobalContext()
     const address = useAddress();
     const signer = useSigner();
-    const sdk = ThirdwebSDK.fromSigner(signer);
-    const contract = await sdk.getContract(
-        crowdsale_details['contract address'], 
-        crowdsale_details.abi, 
-    );
+    // const sdk = ThirdwebSDK.fromSigner(signer);
+    const contract = new ethers.Contract(crowdsale_details['contract address'], crowdsale_details.abi, signer)
+    const toWei = (ether: string) => ethers.utils.parseEther(ether)
+
+    const buyTokens = async () => {
+        const wei = toWei(amount)
+        await contract.buyTokens(address, {value: wei})
+    }
+
   return (
     <><div className={`flex flex-row gap-[25px] sm:gap-[150px] md:gap-[250px] ${open && "md:gap-[100px]"} mt-[30px]`}>
           <button className={`bg-[#6C8726] px-[15px] rounded-[40px] py-[13px] sm:px-[20px] text-white font-semibold text-[14px] sm:text-[17px] lg:text-[20px]`} onClick={() => {setIsPresale(true)}}>Purchase Token</button>
@@ -42,7 +47,7 @@ async function Buy() {
               <div className={`flex flex-col gap-[35px]  border-solid border-2 py-[43px] px-[12px] sm:px-[51px] ${open && "sm:px-7"} border-[#9CAB72] rounded-[25px] `}>
                   <div>
                       <p className='text-[16px]'>Amount BNB</p>
-                      <input type={'number'} className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px] focus:outline-none px-3'>
+                      <input type={'number'} placeholder={'0.0'} onChange={e => setAmount(e.target.value)} className='inputPrice w-[236px] h-[50px] bg-[#383F32] rounded-[14px] focus:outline-none px-3'>
                       </input>
                   </div>
                   <div>
@@ -50,7 +55,7 @@ async function Buy() {
                       <input type={'number'} value={0.0000025} readOnly className='w-[236px] h-[50px] bg-[#383F32] rounded-[14px] p-3 focus:outline-none '></input>
                   </div>
                   <div className='flex items-center flex-col'>
-                  <button  className={`w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-5`} >BUY</button>
+                  <button  className={`w-[236px] h-[50px] bg-[#6C8726] rounded-[5px] text-[18px] mb-5`} onClick={() => buyTokens()} >BUY</button>
                   <p className={`${address && "hidden"} text-red-500 mb-[40px]`}>No wallet connected</p>
                   </div>
               </div>

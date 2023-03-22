@@ -1,4 +1,5 @@
 import { Poppins } from 'next/font/google'
+import {useEffect, useState} from 'react'
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -7,6 +8,40 @@ const poppins = Poppins({
   
 
 export const Hero = () => {
+    const [days, setDays] = useState(0)
+    const [hour, setHour] = useState(0)
+    const [minutes, setMinutes] = useState(0)
+    const [seconds, setSeconds] = useState(0)
+
+    useEffect(() => {
+
+        const target = new Date('2023-03-31T23:59:59')
+
+        console.log(target)
+
+        const interval = setInterval(() => {
+            const now = new Date()
+            const difference = target.getTime() - now.getTime()
+
+            const d = Math.floor(difference / (1000 * 60 * 60 * 24))
+            
+            setDays(d)
+
+            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            
+            setHour(h)
+
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+            
+            setMinutes(m)
+
+            const s = Math.floor((difference % (1000 * 60)) / (1000))
+            
+            setSeconds(s)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [])
   return (
     <><div className='flex flex-col gap-[35px] px-3 mt-[140px] md:px-6 sm:mx-[10px]'>
           <h2 className={`${poppins} text-white font-semibold text-5xl leading-[55px] text-center md:text-6xl md:leading-[72.5px] lg:text-[55px] lg:leading-[70px]`}><span className='text-[#6C8726]'>KIWINATIVE</span> Web3 Platform<br /> And Utility Token</h2>
@@ -18,26 +53,26 @@ export const Hero = () => {
                 {/* calender */}
                 <div className='flex flex-row gap-[30px]'>
                     <div className='flex flex-col gap-[13px] items-center'>
-                        <p className='rounded-[9px] bg-[#2F333F] px-[12px] py-[15px] text-white text-[25px]'>
-                            07
+                        <p className=' rounded-[9px] bg-[#2F333F] px-[12px] py-[15px] text-white text-[25px]'>
+                            {days}
                         </p>
                         <p className='text-[#B4B4B4] text-[16px]'>Days</p>
                     </div>
                     <div className='flex flex-col gap-[13px] items-center'>
                         <p className='rounded-[9px] bg-[#2F333F] px-[12px] py-[15px] text-white text-[25px]'>
-                            11
+                            {hour}
                         </p>
                         <p className='text-[#B4B4B4] text-[16px]'>Hours</p>
                     </div>
                     <div className='flex flex-col gap-[13px] items-center'>
                         <p className='rounded-[9px] bg-[#2F333F] px-[12px] py-[15px] text-white text-[25px]'>
-                            20
+                            {minutes}
                         </p>
                         <p className='text-[#B4B4B4] text-[16px]'>Minutes</p>
                     </div>
                     <div className='flex flex-col gap-[13px] items-center'>
                         <p className='rounded-[9px] bg-[#2F333F] px-[12px] py-[15px] text-white text-[25px]'>
-                            35
+                            {seconds}
                         </p>
                         <p className='text-[#B4B4B4] text-[16px]'>Seconds</p>
                     </div>

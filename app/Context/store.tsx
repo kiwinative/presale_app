@@ -16,6 +16,8 @@ interface ContextProps {
     setActive: Dispatch<SetStateAction<boolean>>
     isPresale: boolean,
     setIsPresale: Dispatch<SetStateAction<boolean>>
+    amount: string,
+    setAmount: Dispatch<SetStateAction<string>>
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -42,6 +44,10 @@ const GlobalContext = createContext<ContextProps>({
     isPresale: false,
     setIsPresale: function (value: SetStateAction<boolean>): void {
         throw new Error("Function not implemented.");
+    },
+    amount: "",
+    setAmount: function (value: SetStateAction<string>): void {
+        throw new Error("Function not implemented.");
     }
 })
 
@@ -52,6 +58,7 @@ export const GlobalContextProvider = ({ children }) => {
     const [faq1Open, setFaq1Open] = useState(true)
     const [active, setActive] = useState(true)
     const [isPresale, setIsPresale] = useState(true)
+    const [amount, setAmount] = useState('')
 
     return (
         <ThirdwebProvider activeChain={ChainId.BinanceSmartChainMainnet} dAppMeta={{
@@ -60,7 +67,7 @@ export const GlobalContextProvider = ({ children }) => {
             logoUrl: "https://kiwinative.pro/logo.png",
             url: "https://kiwinative.pro",
           }}>
-        <GlobalContext.Provider value={{ open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen, faq1Open, setFaq1Open, active, setActive, isPresale, setIsPresale}}>
+        <GlobalContext.Provider value={{ open, setOpen, infosubmenuOpen, setInfoSubmenuOpen, linksubmenuOpen, setLinkSubmenuOpen, faq1Open, setFaq1Open, active, setActive, isPresale, setIsPresale, amount, setAmount}}>
             {children}
         </GlobalContext.Provider>
         </ThirdwebProvider>
