@@ -37,7 +37,7 @@ function Sidebar() {
             </div>
             <div className={`flex py-[10px] items-center ${!open && "justify-center"} cursor-default text-gray-600 font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>
             <ShoppingBagIcon className={`h-[20px] w-[20px] block ${open && "mr-3"}`}/>
-                <p className={`${!open && "hidden"} ${open && "mr-1"}`}>KStore</p>
+                <p className={`${!open && "hidden"} ${open && "mr-1"}`}>PeerMarket</p>
                 <p className={`${!open && "hidden"} text-center px-1 bg-slate-200 rounded-lg`}>soon</p>
             </div>
             <div className={`flex py-[10px] items-center ${!open && "justify-center"} hover:bg-[#DEFEBD] cursor-pointer text-black font-[16px] rounded-[10px] ${open && "mx-7 px-7"} `}>

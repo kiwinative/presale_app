@@ -27,7 +27,7 @@ function Buy() {
   return (
     <><div className={`flex flex-row gap-[25px] sm:gap-[150px] md:gap-[250px] ${open && "md:gap-[100px]"} mt-[30px]`}>
           <button className={`bg-[#6C8726] px-[15px] rounded-[40px] py-[13px] sm:px-[20px] text-white font-semibold text-[14px] sm:text-[17px] lg:text-[20px]`} onClick={() => {setIsPresale(true)}}>Purchase Token</button>
-          <button className='bg-white  px-[15px] rounded-[40px] py-[13px] sm:px-[20px] text-[#6C8726] font-semibold text-[14px] sm:text-[17px] lg:text-[20px]'onClick={() => {setIsPresale(false)}}>Join Airdrop</button>
+          <button id='airdrop' className='bg-white  px-[15px] rounded-[40px] py-[13px] sm:px-[20px] text-[#6C8726] font-semibold text-[14px] sm:text-[17px] lg:text-[20px]'onClick={() => {setIsPresale(false)}}>Join Airdrop</button>
       </div>
           <div className={`${!isPresale && "hidden duration-200"} flex flex-col gap-10 md:flex-row  items-center justify-evenly px-[30px] ${open && "md:flex-col gap-[60px]"} ${open && "lg:flex-row px-[150px]"} lg:px-[87px] py-[73px] w-full bg-[#140E3A] rounded-[27px]`}>
               <div className='flex flex-col gap-[65px]'>
